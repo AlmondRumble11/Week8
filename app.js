@@ -39,7 +39,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 const passport = require("passport");
 const session = require("express-session");
 app.use(cookieParser());
-app.use(session({ secret: 'secre.t' }));
+app.use(session({ secret: 'secret' }));
 app.use(passport.initialize());
 app.use(passport.session());
 require('./auth/auth')(passport);

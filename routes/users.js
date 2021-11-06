@@ -52,7 +52,7 @@ router.post('/api/user/register', /*body('username').isLenght({ min: 1 }).trim()
 
 
 //login using user 
-router.post('/api/user/login', (req, res, next) => {
+router.post('/users/login', (req, res, next) => {
 
 });
 
