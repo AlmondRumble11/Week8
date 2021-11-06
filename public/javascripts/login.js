@@ -30,6 +30,7 @@ function onSubmit(event) {
 
         } else {
             console.log(data.msg);
+            window.location.href = "/error";
 
         }
     })

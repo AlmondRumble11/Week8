@@ -28,6 +28,9 @@ router.get('/login.html', (req, res, next) => {
 router.get(('/'), (req, res, next) => {
     res.render('index');
 });
+router.get(('/error'), (req, res, next) => {
+    res.render('error');
+});
 
 
 
@@ -120,7 +123,7 @@ router.post('/users/login', upload.none(), (req, res, next) => {
                     //return res.redirect('/');
                     res.json({ success: true, token: token, msg: 'Logged in' });
                 } else {
-                    res.send({ success: false, token: token, msg: 'Invalid credentials' });
+                    res.status(403).send({ success: false, token: token, msg: 'Invalid credentials' });
                 }
             });
         }
